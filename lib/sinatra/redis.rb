@@ -1,10 +1,15 @@
 require 'uri'
 require 'redis'
+require 'em-redis'
 
 module Sinatra
   module RedisHelper
     def redis
       settings.redis
+    end
+
+    def async_redis
+      settings.async_redis
     end
   end
 
@@ -15,8 +20,30 @@ module Sinatra
       redis
     end
 
+    def async_redis=(url)
+      @async_redis = nil
+      set :redis_url, url
+      async_redis
+    end
+
     def redis
       @redis ||= (
+        ::Redis.new(
+          base_settings
+        )
+      )
+    end
+
+    def async_redis
+      @async_redis ||= (
+        ::EM::Protocols::Redis.connect(
+          base_settings
+        )
+      )
+    end
+
+		private
+			def base_settings
         url = URI(redis_url)
 
         base_settings = {
@@ -24,15 +51,8 @@ module Sinatra
           :port => url.port,
           :db => url.path[1..-1],
           :password => url.password
-        }
-
-        ::Redis.new(
-          base_settings.merge(
-            redis_settings
-          )
-        )
-      )
-    end
+        }.merge(redis_settings)
+			end
 
   protected
 
