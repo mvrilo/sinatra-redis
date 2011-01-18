@@ -13,6 +13,7 @@ Gem::Specification.new do |s|
   s.email = "blake.mizerany@gmail.com"
 
   s.add_dependency "redis"
+  s.add_dependency "em-redis"
 
   # = MANIFEST =
   s.files = %w[
