@@ -43,13 +43,13 @@ and use like:
 
 ### Redis Reference Material
 
-  * The [Redis Wiki](http://code.google.com/p/redis/)
+  * The [Redis Wiki](http://redis.io/documentation)
 
-  * The [Redis Command Reference](http://code.google.com/p/redis/wiki/CommandReference)
+  * The [Redis Command Reference](http://redis.io/commands)
 
   * The [Redis Source](http://github.com/antirez/redis)
 
-  * Ezra's Mountain West Ruby Conf '09 [Talk](http://mwrc2009.confreaks.com/13-mar-2009-19-24-redis-key-value-nirvana-ezra-zygmuntowicz.html)
+  * Ezra's Mountain West Ruby Conf '09 [Talk](http://confreaks.net/videos/62-mwrc2009-redis-key-value-nirvana)
 
 ### NOTE about the rip-off
 
