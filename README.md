@@ -50,7 +50,3 @@ and use like:
   * The [Redis Source](http://github.com/antirez/redis)
 
   * Ezra's Mountain West Ruby Conf '09 [Talk](http://confreaks.net/videos/62-mwrc2009-redis-key-value-nirvana)
-
-### NOTE about the rip-off
-
-  This Code and README.md is a heavy adaption of [rtomayko's sinatra-sequel](http://github.com/rtomayko/sinatra-sequel/)
