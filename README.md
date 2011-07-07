@@ -1,11 +1,7 @@
 Sinatra Redis Extension
 ========================
 
-Extends [Sinatra](http://www.sinatrarb.com/) with an extension method for dealing with redis databases using the EventMachine based [em-redis](https://github.com/madsimian/em-redis) for asynchronous executions and [redis-rb](https://github.com/ezmobius/redis-rb) client library that comes with the redis source (pre-packaged with this library for convenience). You can Install the `sinatra-redis` with rip:
-
-    $ rip install git://github.com/mvrilo/sinatra-redis.git
-
-or with git:
+Extends [Sinatra](http://www.sinatrarb.com/) with an extension method for dealing with redis databases using the EventMachine based [em-redis](https://github.com/madsimian/em-redis) for asynchronous executions and [redis-rb](https://github.com/ezmobius/redis-rb) client library that comes with the redis source (pre-packaged with this library for convenience). You can install the `sinatra-redis` with git:
 
     $ git clone git://github.com/mvrilo/sinatra-redis.git
 
