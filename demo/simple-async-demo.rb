@@ -5,13 +5,13 @@ require File.expand_path(File.dirname(__FILE__)) + '/../lib/sinatra/redis.rb'
 get '/' do
 	redis.del 'key'
 	EM.run do
-		async_redis.setnx 'key', Time.now.to_i do |ok|
+		aredis.setnx 'key', Time.now.to_i do |ok|
 			puts "Result: #{ok}"
-			puts "Should not return nil: #{redis.get('key')}"
+			puts "Should not return nil: #{redis.get('key').inspect}"
 		end
 	end
 
-	puts "Should return nil: #{redis.get('key')}"
+	puts "Should return nil: #{redis.get('key').inspect}"
 
 	"render some text"
 end
